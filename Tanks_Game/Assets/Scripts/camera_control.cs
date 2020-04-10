@@ -10,7 +10,7 @@ public class camera_control : MonoBehaviour
     {
         Vector3 newPosition = target.position;
         newPosition.z = -10;
-        newPosition.y = 2.1f;
+        newPosition.y = -1.2f;
 
         transform.position = newPosition;
     }

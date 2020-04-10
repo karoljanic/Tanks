@@ -60,9 +60,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\explose.cs" />
     <Compile Include="Assets\Scripts\background_color.cs" />
     <Compile Include="Assets\Scripts\camera_control.cs" />
     <Compile Include="Assets\Scripts\motor_control.cs" />
+    <Compile Include="Assets\Scripts\OnCollision.cs" />
     <Compile Include="Assets\Scripts\tank_control.cs" />
     <Compile Include="Assets\Scripts\turret_control.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
