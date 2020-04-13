@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":-15.877650260925293,"y":1.6348062753677369,"z":12.795323371887207},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":30.976709365844728,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":-11.67476749420166,"y":1.0121943950653077,"z":12.607367515563965},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":66.66217803955078,"orthographic":true}
+>>>>>>> parent of b8da1c6... add main menu

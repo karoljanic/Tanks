@@ -4,6 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
+<<<<<<< HEAD
   m_Scenes:
   - enabled: 0
     path: Assets/Photon Unity Networking/Demos/DemoHub/DemoHub-Scene-V2.unity
@@ -72,4 +73,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: e73cab6b6edfd154880f977d14ac0f1b
+=======
+  m_Scenes: []
+>>>>>>> parent of b8da1c6... add main menu
   m_configObjects: {}

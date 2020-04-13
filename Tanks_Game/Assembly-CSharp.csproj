@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\CustomTypes.cs" />
     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Enums.cs" />
     <Compile Include="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Extensions.cs" />
@@ -165,6 +166,15 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Photon Unity Networking\changelog.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+=======
+    <Compile Include="Assets\explose.cs" />
+    <Compile Include="Assets\Scripts\background_color.cs" />
+    <Compile Include="Assets\Scripts\camera_control.cs" />
+    <Compile Include="Assets\Scripts\motor_control.cs" />
+    <Compile Include="Assets\Scripts\OnCollision.cs" />
+    <Compile Include="Assets\Scripts\tank_control.cs" />
+    <Compile Include="Assets\Scripts\turret_control.cs" />
+>>>>>>> parent of b8da1c6... add main menu
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/User/Documents/GitHub/Tanks/Tanks_Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
