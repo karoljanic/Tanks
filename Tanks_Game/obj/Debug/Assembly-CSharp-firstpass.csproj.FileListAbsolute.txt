@@ -238,3 +238,6 @@ C:\Users\User\Documents\GitHub\Tanks\Tanks_Game\obj\Debug\Assembly-CSharp-firstp
 C:\Users\User\Documents\GitHub\Tanks\Tanks_Game\obj\Debug\Assembly-CSharp-firstpass.csproj.CopyComplete
 C:\Users\User\Documents\GitHub\Tanks\Tanks_Game\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\User\Documents\GitHub\Tanks\Tanks_Game\obj\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\User\Documents\GitHub\Tanks\Tanks_Game\Temp\bin\Debug\Photon3Unity3D.dll
+C:\Users\User\Documents\GitHub\Tanks\Tanks_Game\Temp\bin\Debug\websocket-sharp.dll
+C:\Users\User\Documents\GitHub\Tanks\Tanks_Game\Temp\bin\Debug\Photon3Unity3D.xml
