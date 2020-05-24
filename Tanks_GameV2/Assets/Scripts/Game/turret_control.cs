@@ -72,7 +72,7 @@ public class turret_control : MonoBehaviour
     public void DrawTrajectory()
     {
         for (int i = 0; i < trajectorydots.Length; i++)
-            trajectorydots[i].transform.position = shotpoint.position + calculateposition2(i * 0.1f);
+            trajectorydots[i].transform.position = shotpoint.position + calculateposition2(i * 0.2f);
     }
 
     public void ShowTrajectory()
@@ -164,14 +164,14 @@ public class turret_control : MonoBehaviour
             Vector3 mousePosWorld = GetWorldPositionOnPlane(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0.0f), 0.0f);
 
             float distanceFromPlayer = Vector3.Distance(transform.position, mousePosWorld);
-            force = distanceFromPlayer * 1.0f;
+            force = distanceFromPlayer * 0.65f;
 
             Vector3 dir = transform.position - mousePosWorld;
 
             float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             if (facingRight)
             {
-               // angle = Mathf.Clamp(angle, 10.0f, 50.0f);
+                //angle = Mathf.Clamp(angle, 10.0f, 50.0f);
             } else
             {
                 angle += 180.0f;
@@ -302,7 +302,7 @@ public class turret_control : MonoBehaviour
     private Vector3 calculateposition2(float time)
     {
         var multiplier = force * (transform.lossyScale.x > 0.0f ? 1.0f : -1.0f);
-        return ((Vector2)(shotpoint.right * multiplier * time) + (0.5f * Physics2D.gravity * time * time));
+        return ((Vector2)(shotpoint.right * multiplier * time) + (Physics2D.gravity * time * time*0.5f));
         //return new Vector2(-forceatplayer.x * force, -forceatplayer.y * force) * time + 0.5f * Physics2D.gravity * time * time;
     }
 

@@ -51,7 +51,7 @@ public class PlayerMovement : Photon.MonoBehaviour
     private bool facingRight = true;
     Vector3 localScale;
 
-    public float Speed = 1500;
+    public float Speed = 2500;
 
     private WheelJoint2D Wheel1, Wheel2, Wheel3;
 
@@ -120,7 +120,7 @@ public class PlayerMovement : Photon.MonoBehaviour
             _R.AddForce((facingRight ? Vector3.right : -Vector3.right) * 30.0f * _MForce);
         }
 
-        Speed = 500.0f + (2500.0f * _MForce);
+        Speed = 180.0f + (2500.0f * _MForce);
 
         CoM.transform.localPosition = //_R.centerOfMass;
         

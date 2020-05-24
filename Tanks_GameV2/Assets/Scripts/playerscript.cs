@@ -18,28 +18,43 @@ public class playerscript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
         object tankID;
         View.owner.CustomProperties.TryGetValue("TankID", out tankID);
         int iTankID = (int)tankID;
 
         for(var i = 0; i < _BodyViews.Length; i++)
         {
-            _BodyViews[i].enabled = i == iTankID;
+            if(i == iTankID)
+                _BodyViews[i].enabled = true;
+            else
+                _BodyViews[i].enabled = false;
+
         }
 
         for (var i = 0; i < _TurretViews.Length; i++)
         {
-            _TurretViews[i].enabled = i == iTankID;
+            if (i == iTankID)
+                _TurretViews[i].enabled = true;
+            else
+                _TurretViews[i].enabled = false;
         }
 
-        for (var i = 0; i < _TankTrackViews.Length; i++)
+        for (var i = 0; i < _TankTrackViews.Length-1; i++)
         {
-            _TankTrackViews[i].enabled = i == iTankID;
+            if (i == iTankID)
+                _TankTrackViews[i].enabled = true;
+            else
+                _TankTrackViews[i].enabled = false;
         }
 
-        
+        if (2 == iTankID)
+            _TankTrackViews[_TankTrackViews.Length-1].enabled = true;
+        else
+            _TankTrackViews[_TankTrackViews.Length-1].enabled = false;
+
+
+
+
         var bars = FindObjectOfType<HealthBars>();
         if (View != null && View.owner != null)
         {
