@@ -59,8 +59,13 @@ public class PlayerMovement : Photon.MonoBehaviour
 
     private JointMotor2D Motor;
 
+
+
     private void Awake()
     {
+        Vector3 pos = new Vector3(31.5f, -0.2f, 0f);
+        if (transform.position == pos)
+            facingRight = false;
         PhotonView = GetComponent<PhotonView>();
 
         localScale = transform.localScale;
@@ -91,7 +96,6 @@ public class PlayerMovement : Photon.MonoBehaviour
 
     void Update()
     {
-
         if (_PlayerScript.IsDead)
         {
             return;
@@ -99,11 +103,7 @@ public class PlayerMovement : Photon.MonoBehaviour
         var rr = transform.rotation.eulerAngles.z;
         rr = rr > 180.0f ? (rr - 360.0f) : rr;
         rr = Mathf.Clamp(rr, -50.0f, 50.0f);
-        transform.rotation = Quaternion.Euler(
-            0.0f,
-            0.0f,
-            rr
-            );
+        transform.rotation = Quaternion.Euler(0.0f, 0.0f, rr);
         var m = 1.0f / (Mathf.Abs(transform.rotation.eulerAngles.z - 180.0f)/90.0f);
         transform.rotation = Quaternion.Lerp(
             transform.rotation,

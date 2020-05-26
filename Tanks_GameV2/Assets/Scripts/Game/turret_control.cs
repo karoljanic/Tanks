@@ -42,8 +42,25 @@ public class turret_control : MonoBehaviour
     private static Vector3 _CamAimOffset = new Vector3(0.0f, -1.2f, -25.0f);
     private static Vector3 _CamBulletOffset = new Vector3(0.0f, 0.0f, -32.0f);
 
+    private PhotonView _View;
+    public PhotonView View
+    {
+        get
+        {
+            if (_View == null)
+            {
+                _View = GetComponent<PhotonView>();
+            }
+            return _View;
+        }
+    }
+
     private void Start()
     {
+        object tankID;
+        View.owner.CustomProperties.TryGetValue("TankID", out tankID);
+        int iTankID = (int)tankID;
+
         _Cam = FindObjectOfType<camera_control>();
         _Cam.target = tank.transform;
         _Cam.Offset = _CamTankOffset;
@@ -198,8 +215,8 @@ public class turret_control : MonoBehaviour
                 q = new Quaternion(tank.transform.rotation.x, tank.transform.rotation.y, tank.transform.rotation.z + 0.2f, tank.transform.rotation.w);
             else
                 q = new Quaternion(tank.transform.rotation.x, tank.transform.rotation.y, tank.transform.rotation.z - 0.2f, tank.transform.rotation.w);
-            transform.rotation = q;
-            //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 3.0f);
+            //transform.rotation = q;
+            transform.rotation = Quaternion.Lerp(transform.rotation, q, Time.deltaTime * 3.0f);
         }
 
 

@@ -53,8 +53,6 @@ public class playerscript : MonoBehaviour
             _TankTrackViews[_TankTrackViews.Length-1].enabled = false;
 
 
-
-
         var bars = FindObjectOfType<HealthBars>();
         if (View != null && View.owner != null)
         {
