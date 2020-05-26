@@ -66,7 +66,6 @@ public class turret_control : MonoBehaviour
         return ray.GetPoint(distance);
     }
 
-
     private bool _TrajectoryVisible;
 
     public void DrawTrajectory()
@@ -194,7 +193,13 @@ public class turret_control : MonoBehaviour
         }
         else
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 3.0f);
+            Quaternion q;
+            if (facingRight)
+                q = new Quaternion(tank.transform.rotation.x, tank.transform.rotation.y, tank.transform.rotation.z + 0.2f, tank.transform.rotation.w);
+            else
+                q = new Quaternion(tank.transform.rotation.x, tank.transform.rotation.y, tank.transform.rotation.z - 0.2f, tank.transform.rotation.w);
+            transform.rotation = q;
+            //transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.identity, Time.deltaTime * 3.0f);
         }
 
 
